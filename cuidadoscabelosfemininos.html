@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cuidados com Cabelos Femininos | Salão Espaço Helena</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="menu.css">
+
+<style>
+* { box-sizing: border-box; margin:0; padding:0; }
+
+html, body {
+  font-family: 'Poppins', sans-serif;
+  background:#fff;
+  height:100%;
+}
+
+.page-container {
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+.titulo-site {
+  font-size:36px;
+  text-align:center;
+  margin-top:20px;
+  line-height:1.3;
+  color:#333;
+}
+
+.logo-salao {
+  text-align:center;
+  font-size:36px;
+  margin-top:8px;
+  font-family:'Great Vibes', cursive;
+  font-weight:900;
+}
+
+.logo-salao .salao { color:#000; }
+.logo-salao .helena { color:#C9A35B; }
+
+.sobre {
+  max-width:900px;
+  margin:24px auto;
+  font-size:16px;
+  line-height:1.7;
+  color:#555;
+  padding:0 18px;
+}
+
+.sobre h2 {
+  font-size:22px;
+  margin:20px 0 12px;
+  color:#000;
+}
+
+.sobre p { margin-bottom:16px; }
+
+.sobre ul {
+  margin-bottom:16px;
+  padding-left:20px;
+}
+
+.sobre strong {
+  font-weight:600;
+  color:#555;
+}
+
+.side-tab {
+  position:fixed;
+  top:50%;
+  right:0;
+  transform:translateY(-50%);
+  background:#000;
+  color:#fff;
+  width:40px;
+  height:140px;
+  border-radius:8px 0 0 8px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+  z-index:999;
+}
+
+.tab-panel {
+  position:fixed;
+  top:0;
+  right:-400px;
+  width:400px;
+  height:100%;
+  background:#fff;
+  padding:30px;
+  box-shadow:-3px 0 15px rgba(0,0,0,0.3);
+  transition:right 0.3s;
+  z-index:1000;
+  overflow-y:auto;
+}
+
+.tab-panel.active { right:0; }
+
+.tab-panel h2 {
+  font-size:22px;
+  margin-bottom:15px;
+}
+
+.tab-panel p {
+  font-size:14px;
+  line-height:1.4;
+  margin-bottom:20px;
+  font-weight:bold;
+}
+
+.tab-panel button {
+  width:100%;
+  padding:12px;
+  margin-bottom:12px;
+  background:#000;
+  color:#C9A35B;
+  border:none;
+  border-radius:6px;
+  font-size:16px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.tab-panel button:hover { color:#FFD700; }
+
+.tab-panel button.active { color:#C9A35B; }
+
+.tab-panel .area-image {
+  width:100%;
+  margin-top:15px;
+  border-radius:6px;
+}
+
+.overlay {
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+  z-index:998;
+}
+
+footer {
+  background:#000;
+  color:#fff;
+  text-align:center;
+  padding:30px 15px;
+  margin-top:auto;
+}
+
+footer .logo {
+  font-family:'Great Vibes', cursive;
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+footer .salao { color:#fff; }
+footer .helena { color:#C9A35B; font-weight:bold; }
+
+footer .localidade {
+  font-size:14px;
+}
+
+@media(max-width:480px){
+  .titulo-site{font-size:28px;}
+  .logo-salao{font-size:28px;}
+  .sobre{font-size:15px; padding:0 12px;}
+  .tab-panel{width:300px; padding:20px;}
+}
+</style>
+</head>
+
+<body>
+<div class="page-container">
+
+<nav class="menu">
+  <a href="index.html">Introdução</a>
+  <a href="servicos.html">Serviços</a>
+  <a href="vitrine.html">Vitrine</a>
+</nav>
+
+<h1 class="titulo-site">Cuidados com Cabelos Femininos</h1>
+
+<div class="logo-salao">
+  <span class="salao">Salão </span><span class="helena">Espaço Helena</span>
+</div>
+
+<section class="sobre">
+
+  <div style="text-align:center; margin:20px 0;">
+    <img src="fotocabelosfemininosexemplo.png" alt="Imagem de cuidados pessoais femininos"
+         style="max-width:100%; border-radius:10px;">
+  </div>
+
+  <h2>Por que cuidar dos cabelos diariamente?</h2>
+  <p>Cabelos femininos exigem atenção constante para manter brilho, maciez e resistência. Pequenos cuidados diários, como escolher produtos adequados e evitar excessos de calor, prolongam a saúde e a beleza natural dos fios.</p>
+
+  <h2>Escolhendo o shampoo perfeito</h2>
+  <p>O shampoo certo varia conforme o tipo de cabelo: oleoso, seco, misto ou quimicamente tratado. Além disso, shampoos com ativos naturais, vitaminas e proteínas ajudam a fortalecer os fios enquanto limpam suavemente o couro cabeludo.</p>
+
+  <h2>Nutrição e hidratação profundas</h2>
+  <p>Hidratar e nutrir vai muito além do condicionador diário. Máscaras semanais e óleos vegetais proporcionam força, elasticidade e brilho. Ingredientes como argan, coco, manteiga de karité ou queratina protegem e revitalizam os fios.</p>
+
+  <h2>Protegendo do calor e do sol</h2>
+  <p>Secadores, chapinhas e exposição solar podem danificar os fios. Sempre use protetores térmicos antes do uso de ferramentas e produtos com filtro UV para proteger a cor e a saúde capilar.</p>
+
+  <h2>Rotina personalizada para cada tipo de cabelo</h2>
+  <p>Cabelos lisos, ondulados, cacheados ou crespos têm necessidades diferentes. Conhecer seu tipo de fio e usar produtos específicos ajuda a manter definição, volume e reduzir o frizz.</p>
+
+  <h2>Finalização e penteados</h2>
+  <p>Escolher o pente ou escova correta faz toda a diferença. Dentes largos desembaraçam suavemente, enquanto escovas menores auxiliam em detalhes e penteados elaborados. Produtos leave-in ajudam a manter o estilo por mais tempo.</p>
+
+  <h2>Manutenção e cortes regulares</h2>
+  <p>Cortes periódicos eliminam pontas duplas e ajudam no crescimento saudável. Combine a manutenção com tratamentos semanais para garantir fios sempre fortes, alinhados e cheios de vida.</p>
+
+  <h2>Dicas extras para cabelos saudáveis</h2>
+  <ul>
+    <li><strong>Alimentação balanceada:</strong> nutrientes certos refletem no brilho e resistência dos fios.</li>
+    <li><strong>Evite água muito quente:</strong> preserva a oleosidade natural do cabelo.</li>
+    <li><strong>Massagem no couro cabeludo:</strong> estimula a circulação e crescimento capilar.</li>
+    <li><strong>Evite químicas em excesso:</strong> proteja a saúde do fio e a cor natural.</li>
+  </ul>
+
+  <p><strong>Benefício:</strong> cabelos mais fortes, brilhantes e fáceis de pentear, mantendo sua beleza natural por mais tempo.</p>
+
+</section>
+
+<div class="side-tab" id="sideTab">☰</div>
+<div class="overlay" id="overlay"></div>
+
+<div class="tab-panel" id="tabPanel">
+    <p>
+      Explore nossas áreas exclusivas: acompanhe antes e depois, vídeos explicativos, processos e dicas especiais.<br>
+      Descubra detalhes do universo masculino e feminino com elegância e praticidade, e inspire-se com cada resultado.
+    </p>
+  <button onclick="location.href='areamasculina.html'">Área Masculina</button>
+  <button onclick="location.href='areafeminina.html'">Área Feminina</button>
+  <button onclick="location.href='index.html'">Home</button>
+  <img src="imagemdaarea.png" class="area-image">
+</div>
+
+<footer>
+  <div class="logo">
+    <span class="salao">Salão</span>
+    <span class="helena">Espaço Helena</span>
+  </div>
+  <div class="localidade">
+    Rua Maria Rodrigues de Pontes - Alto do Velame - Russas, 490
+  </div>
+</footer>
+
+</div>
+
+<script>
+const sideTab = document.getElementById('sideTab');
+const overlay = document.getElementById('overlay');
+const tabPanel = document.getElementById('tabPanel');
+
+sideTab.onclick = () => {
+  overlay.style.display = 'block';
+  tabPanel.classList.add('active');
+};
+
+overlay.onclick = () => {
+  overlay.style.display = 'none';
+  tabPanel.classList.remove('active');
+};
+
+document.querySelectorAll('.menu a').forEach(link => {
+  if (link.href === window.location.href) {
+    link.classList.add('active');
+  }
+});
+</script>
+
+</body>
+</html>

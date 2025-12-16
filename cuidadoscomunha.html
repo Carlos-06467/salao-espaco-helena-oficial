@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Salão Espaço Helena</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- MENU GLOBAL -->
+<link rel="stylesheet" href="menu.css">
+
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  html, body { font-family: 'Poppins', sans-serif; background:#fff; height:100%; }
+  .page-container { min-height:100vh; display:flex; flex-direction:column; }
+
+  /* Título principal e logo abaixo */
+  .titulo-site { font-size:36px; text-align:center; margin-top:20px; line-height:1.3; color:#333; }
+  .logo-salao { text-align:center; font-size:36px; margin-top:8px; font-family:'Great Vibes', cursive; font-weight:900; }
+  .logo-salao .salao { color:#000; }
+  .logo-salao .helena { color:#C9A35B; }
+
+  /* Conteúdo da área branca */
+  .sobre { max-width:900px; margin:24px auto; font-size:16px; line-height:1.6; color:#555; padding:0 18px; }
+  .sobre h2 { font-size:22px; margin:18px 0 10px; color:#000; }
+  .sobre p { margin-bottom:14px; }
+  .sobre ul { margin-bottom:14px; padding-left:20px; }
+  .sobre strong { font-weight:600; color:#555; }
+
+  /* Rodapé */
+  footer { background:#000; color:#fff; text-align:center; padding:30px 15px; margin-top:auto; }
+  footer .logo { font-family:'Great Vibes', cursive; font-size:32px; margin-bottom:10px; }
+  footer .salao { color:#fff; }
+  footer .helena { color:#C9A35B; font-weight:bold; }
+  footer .localidade { font-size:14px; }
+
+  /* Aba lateral */
+  .side-tab {
+    position:fixed;
+    top:50%;
+    right:0;
+    transform:translateY(-50%);
+    background:#000;
+    color:#fff;
+    width:40px;
+    height:140px;
+    border-radius:8px 0 0 8px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    z-index:999;
+  }
+
+  .tab-panel {
+    position:fixed;
+    top:0;
+    right:-400px;
+    width:400px;
+    height:100%;
+    background:#fff;
+    padding:30px;
+    box-shadow:-3px 0 15px rgba(0,0,0,0.3);
+    transition:right 0.3s;
+    z-index:1000;
+    overflow-y:auto;
+  }
+
+  .tab-panel.active { right:0; }
+
+  .tab-panel h2 { font-size:22px; margin-bottom:15px; }
+
+  .tab-panel p {
+    font-size:14px;
+    line-height:1.4;
+    margin-bottom:20px;
+    font-weight:bold;
+  }
+
+  .tab-panel button {
+    width:100%;
+    padding:12px;
+    margin-bottom:12px;
+    background:#000;
+    color:#C9A35B;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+  }
+
+  .tab-panel button:hover { color:#FFD700; }
+
+  .tab-panel button.active { color:#C9A35B; }
+
+  .tab-panel .area-image {
+    width:100%;
+    height:auto;
+    margin-top:12px;
+    border-radius:6px;
+  }
+
+  .overlay {
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    z-index:998;
+  }
+
+  @media(max-width:480px){
+    .titulo-site{font-size:28px;}
+    .logo-salao{font-size:28px;}
+    .sobre{font-size:15px; padding:0 12px;}
+    .tab-panel{width:300px; padding:20px;}
+  }
+</style>
+</head>
+
+<body>
+<div class="page-container">
+
+  <!-- MENU SUPERIOR -->
+  <nav class="menu">
+    <a href="index.html">Introdução</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="vitrine.html">Vitrine</a>
+  </nav>
+
+  <!-- TÍTULO -->
+  <h1 class="titulo-site">Cuidados com Unhas Masculinas</h1>
+
+  <div class="logo-salao">
+    <span class="salao">Salão </span><span class="helena">Espaço Helena</span>
+  </div>
+
+  <!-- CONTEÚDO -->
+  <section class="sobre">
+
+    <div style="text-align:center; margin:20px 0;">
+      <img src="unhasmasculinas0.png" alt="Cuidados com unhas masculinas" style="max-width:100%; border-radius:10px;">
+    </div>
+
+    <h2>A Importância da Manutenção das Unhas</h2>
+    <p>As unhas masculinas revelam muito sobre higiene, saúde e atenção aos detalhes. Uma simples apresentação das mãos transmite cuidado pessoal e até profissionalismo. Além disso, manter as unhas saudáveis evita infecções, fungos, mau odor e desconfortos que podem surgir ao longo da rotina.</p>
+
+    <h2>Higiene Correta e Prevenção</h2>
+    <p>Homens frequentemente lidam com poeira, suor, ferramentas e objetos que acumulam sujeira sob as unhas. Por isso, lavar as mãos com escovinha macia, secar corretamente e cortar com frequência são passos essenciais para impedir que bactérias e fungos se instalem.</p>
+
+    <p><strong>Dica pouco conhecida:</strong> manter as mãos úmidas por muito tempo enfraquece a queratina da unha, aumentando a chance de descamar, abrir fissuras e até descolar em alguns casos.</p>
+
+    <h2>Hábitos que Prejudicam — e Muitos Homens Não Sabem</h2>
+    <ul>
+      <li><strong>Roer as unhas:</strong> além de deformar o formato, transfere bactérias para a boca.</li>
+      <li><strong>Arrancar pelinhas:</strong> pode gerar infecções sérias ao redor da cutícula.</li>
+      <li><strong>Usar as unhas como ferramenta:</strong> abre portas para fraturas e lascas.</li>
+      <li><strong>Cortar fundo demais:</strong> aumenta o risco de unha encravada.</li>
+      <li><strong>Compartilhar alicate:</strong> é um dos maiores causadores de fungos.</li>
+    </ul>
+
+    <h2>Como Cuidar Corretamente das Unhas Masculinas</h2>
+    <p>Uma boa rotina consiste em cortar as unhas semanalmente, lixar suavemente para evitar pontas que prendem na roupa e hidratar as cutículas. A hidratação é um detalhe simples, mas poderoso: evita rachaduras, deixa o aspecto mais saudável e previne a descamação.</p>
+
+    <p><strong>Informação avançada:</strong> a cutícula nunca deve ser removida em casa — ela é a barreira natural contra bactérias. O ideal é apenas empurrar suavemente para manter o formato limpo e harmonioso.</p>
+
+    <h2>A Relação Entre Saúde Geral e Unhas</h2>
+    <p>As unhas podem revelar sinais de estresse, falta de vitaminas, problemas circulatórios e até alterações hormonais. Manchas, ondulações e quebras frequentes não são apenas estéticas — podem indicar algo maior. Manter atenção a mudanças ajuda a identificar problemas cedo.</p>
+
+    <h2>Por Que Ir ao Salão é Essencial</h2>
+    <p>Ao contrário do que muitos pensam, manicure masculina é cuidado, não vaidade. No salão, os profissionais trabalham com instrumentos esterilizados, técnicas seguras e produtos adequados. Além disso, o acabamento profissional deixa as mãos com aspecto impecável e saudável.</p>
+
+    <p>Ir ao salão regularmente evita acidentes, reduz a chance de inflamações, melhora o formato das unhas e fortalece a barreira natural da pele. É um investimento direto em bem-estar, presença e saúde.</p>
+
+    <h2>Quando Procurar Ajuda Profissional</h2>
+    <p>Se houver descamação persistente, odor forte, alteração de cor ou dor ao tocar, é sinal de que a unha precisa de atenção especial. Um profissional qualificado identifica rapidamente se é apenas um problema superficial ou se exige tratamento mais específico.</p>
+
+  </section>
+
+  <!-- ABA LATERAL -->
+  <div class="side-tab" id="sideTab">☰</div>
+  <div class="overlay" id="overlay"></div>
+
+  <div class="tab-panel" id="tabPanel">
+    <p>Explore nossas áreas masculinas e femininas, acompanhe antes e depois, vídeos explicativos, processos e dicas especiais. Descubra detalhes do universo masculino e feminino com elegância e praticidade.</p>
+
+    <button id="btn-masculina">Área Masculina</button>
+    <button id="btn-feminina">Área Feminina</button>
+    <button id="btn-home">Home</button>
+
+    <img src="imagemdaarea.png" alt="Área Exclusiva" class="area-image">
+  </div>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <div class="logo">
+      <span class="salao">Salão</span> <span class="helena">Espaço Helena</span>
+    </div>
+    <div class="localidade">Rua Maria Rodrigues de Pontes - Alto do Velame - Russas, 490</div>
+  </footer>
+
+</div>
+
+<script>
+  const sideTab = document.getElementById('sideTab');
+  const overlay = document.getElementById('overlay');
+  const tabPanel = document.getElementById('tabPanel');
+
+  sideTab.onclick = () => {
+    overlay.style.display = 'block';
+    tabPanel.classList.add('active');
+  };
+
+  overlay.onclick = () => {
+    overlay.style.display = 'none';
+    tabPanel.classList.remove('active');
+  };
+
+  document.getElementById('btn-masculina').onclick = () => location.href = "areamasculina.html";
+  document.getElementById('btn-feminina').onclick = () => location.href = "areafeminina.html";
+  document.getElementById('btn-home').onclick = () => location.href = "index.html";
+
+  document.querySelectorAll('.menu a').forEach(link => {
+    if (link.href === window.location.href) link.classList.add('active');
+  });
+</script>
+
+</body>
+</html>
