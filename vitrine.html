@@ -16,51 +16,225 @@
 <meta name="twitter:card" content="summary_large_image" />
 
 <style>
-  * { box-sizing:border-box; margin:0; padding:0; }
-  html, body { height:100%; font-family:'Poppins', sans-serif; background:#fff; }
-  .page-container { min-height:100vh; display:flex; flex-direction:column; }
+ * { box-sizing:border-box; margin:0; padding:0; }
 
-  /* Menu */
-  .menu { background:#000; display:flex; justify-content:center; gap:40px; padding:10px 0; }
-  .menu a { color:#fff; text-decoration:none; font-weight:600; padding:4px 8px; border-radius:4px; display:flex; align-items:center; gap:6px; transition:0.3s; }
-  .menu a:hover { background:#222; }
-  .menu a::before { content:"•"; color:#C9A35B; margin-right:4px; }
-  .menu a.active { color:#C9A35B; }
+html, body { 
+  height:100%; 
+  font-family:'Poppins', sans-serif; 
+  background:#fff; 
+}
 
-  /* Título */
-  .vitrine-titulo { font-weight:600; font-size:42px; text-align:center; margin:40px 30px 30px 30px; color:#333; }
-  .salao { color:#000; }
-  .helena { color:#C9A35B; font-weight:bold; }
+.page-container { 
+  min-height:100vh; 
+  display:flex; 
+  flex-direction:column; 
+}
 
-  /* Conteúdo */
-  .vitrine-texto { color:#555; max-width:900px; margin:24px auto; font-size:16px; line-height:1.6; padding:0 30px; }
-  .vitrine-texto a { color:#000; text-decoration:underline; text-decoration-color:#C9A35B; text-decoration-thickness:2px; text-decoration-skip-ink:none; }
+/* Menu */
+.menu { 
+  background:#000; 
+  display:flex; 
+  justify-content:center; 
+  gap:40px; 
+  padding:10px 0; 
+}
 
-  /* Rodapé */
-  footer { background:#000; color:#fff; text-align:center; padding:40px 20px 20px 20px; margin-top:auto; }
-  footer .logo-footer { font-family:'Great Vibes', cursive; font-size:36px; margin:10px 0; }
-  footer .salao { color:#fff; }
-  footer .helena { color:#C9A35B; font-weight:bold; }
-  footer .localidade { font-size:14px; margin-bottom:10px; }
+.menu a { 
+  color:#fff; 
+  text-decoration:none; 
+  font-weight:600; 
+  padding:4px 8px; 
+  border-radius:4px; 
+  display:flex; 
+  align-items:center; 
+  gap:6px; 
+  transition:0.3s; 
+}
 
-  /* Aba lateral */
-  .side-tab { position:fixed; top:50%; right:0; transform:translateY(-50%); background:#000; color:#fff; width:40px; height:140px; border-radius:8px 0 0 8px; display:flex; flex-direction:column; justify-content:center; align-items:center; cursor:pointer; z-index:999; transition:width 0.3s; }
-  .overlay { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:998; }
-  .tab-panel { position:fixed; top:0; right:-400px; width:400px; height:100%; background:#fff; padding:30px; box-shadow:-3px 0 15px rgba(0,0,0,0.3); transition:right 0.3s; z-index:1000; overflow-y:auto; }
-  .tab-panel.active { right:0; }
-  .tab-panel h2 { font-size:22px; margin-bottom:15px; }
-  .tab-panel p { font-size:14px; line-height:1.4; margin-bottom:20px; font-weight:bold; }
-  .tab-panel button { width:100%; padding:12px; margin-bottom:12px; background:#000; color:#C9A35B; border:none; border-radius:6px; font-size:16px; cursor:pointer; font-weight:bold; transition:0.3s; }
-  .tab-panel button:hover { color:#FFD700; }
-  .tab-panel button.active { color:#C9A35B; }
-  .tab-panel img.area-image { max-width:100%; height:auto; display:block; margin-top:15px; border-radius:6px; }
+.menu a:hover { 
+  background:#222; 
+}
 
-  @media(max-width:480px){
-    .vitrine-titulo{font-size:36px; margin:40px 15px 30px 15px;}
-    .vitrine-texto{font-size:15px; padding:0 12px;}
-    .menu a{font-size:14px; padding:4px 6px;}
-    .tab-panel{width:300px; padding:20px;}
+.menu a::before { 
+  content:"•"; 
+  color:#C9A35B; 
+  margin-right:4px; 
+}
+
+.menu a.active { 
+  color:#C9A35B; 
+}
+
+/* ===== TÍTULO DA VITRINE COM FUNDO (IGUAL SERVIÇOS) ===== */
+.vitrine-titulo { 
+  font-weight:600; 
+  font-size:42px; 
+  text-align:center; 
+  width:100%;
+  margin:0 0 70px 0;           /* espaço abaixo igual */
+  padding:90px 20px;          /* altura do fundo */
+  line-height:1.3; 
+  color:#fff; 
+  background-image: url("fotodavitrine.jpg");
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  text-shadow:
+    -1.5px -1.5px 0 #000,
+     1.5px -1.5px 0 #000,
+    -1.5px  1.5px 0 #000,
+     1.5px  1.5px 0 #000;
+}
+
+.salao { color:#fff; }
+.helena { color:#C9A35B; font-weight:bold; }
+
+/* Conteúdo */
+.vitrine-texto { 
+  color:#555; 
+  max-width:900px; 
+  margin:24px auto; 
+  font-size:16px; 
+  line-height:1.6; 
+  padding:0 30px; 
+}
+
+.vitrine-texto a { 
+  color:#000; 
+  text-decoration:underline; 
+  text-decoration-color:#C9A35B; 
+  text-decoration-thickness:2px; 
+  text-decoration-skip-ink:none; 
+}
+
+/* Rodapé */
+footer { 
+  background:#000; 
+  color:#fff; 
+  text-align:center; 
+  padding:40px 20px 20px 20px; 
+  margin-top:auto; 
+}
+
+footer .logo-footer { 
+  font-family:'Great Vibes', cursive; 
+  font-size:36px; 
+  margin:10px 0; 
+}
+
+footer .salao { 
+  color:#fff; 
+}
+
+footer .helena { 
+  color:#C9A35B; 
+  font-weight:bold; 
+}
+
+footer .localidade { 
+  font-size:14px; 
+  margin-bottom:10px; 
+}
+
+/* Aba lateral */
+.side-tab { 
+  position:fixed; 
+  top:50%; 
+  right:0; 
+  transform:translateY(-50%); 
+  background:#000; 
+  color:#fff; 
+  width:40px; 
+  height:140px; 
+  border-radius:8px 0 0 8px; 
+  display:flex; 
+  flex-direction:column; 
+  justify-content:center; 
+  align-items:center; 
+  cursor:pointer; 
+  z-index:999; 
+}
+
+.overlay { 
+  display:none; 
+  position:fixed; 
+  top:0; 
+  left:0; 
+  width:100%; 
+  height:100%; 
+  background:rgba(0,0,0,0.5); 
+  z-index:998; 
+}
+
+.tab-panel { 
+  position:fixed; 
+  top:0; 
+  right:-400px; 
+  width:400px; 
+  height:100%; 
+  background:#fff; 
+  padding:30px; 
+  box-shadow:-3px 0 15px rgba(0,0,0,0.3); 
+  transition:right 0.3s; 
+  z-index:1000; 
+  overflow-y:auto; 
+}
+
+.tab-panel.active { 
+  right:0; 
+}
+
+.tab-panel p { 
+  font-size:14px; 
+  line-height:1.4; 
+  margin-bottom:20px; 
+  font-weight:bold; 
+}
+
+.tab-panel button { 
+  width:100%; 
+  padding:12px; 
+  margin-bottom:12px; 
+  background:#000; 
+  color:#C9A35B; 
+  border:none; 
+  border-radius:6px; 
+  font-size:16px; 
+  cursor:pointer; 
+  font-weight:bold; 
+}
+
+.tab-panel img.area-image { 
+  max-width:100%; 
+  height:auto; 
+  display:block; 
+  margin-top:15px; 
+  border-radius:6px; 
+}
+
+/* Responsivo */
+@media(max-width:480px){
+  .vitrine-titulo{
+    font-size:36px; 
+    padding:70px 15px; 
+    margin-bottom:50px;
   }
+
+  .vitrine-texto{
+    font-size:15px; 
+    padding:0 12px;
+  }
+
+  .menu a{
+    font-size:14px; 
+    padding:4px 6px;
+  }
+
+  .tab-panel{
+    width:300px; 
+    padding:20px;
+  }
+}
 </style>
 </head>
 <body>
@@ -78,7 +252,7 @@
 
   <!-- Conteúdo principal -->
   <main>
-    <h1 class="vitrine-titulo">Vitrine de Produtos do Salão ✨</h1>
+    <h1 class="vitrine-titulo">Vitrine de Produtos do Salão</h1>
     <section class="vitrine-texto">
       <p>No Espaço Helena, você encontra produtos úteis para o dia a dia que facilitam seus cuidados com beleza e bem-estar. Temos shampoo anticaspa, máscaras de hidratação, cremes para a pele, pentes, perfumes e muito mais.</p>
       <p>Para adquirir, entre em contato:<br>
