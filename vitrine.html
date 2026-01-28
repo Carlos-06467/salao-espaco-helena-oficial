@@ -5,244 +5,162 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vitrine de Produtos do Espaço Helena</title>
+<title>Salão Espaço Helena</title>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<!-- Meta tags para compartilhamento com logo -->
-<meta property="og:title" content="Vitrine de Produtos do Espaço Helena" />
-<meta property="og:description" content="Confira os produtos do Espaço Helena: shampoos, máscaras de hidratação, cremes e muito mais para seu cuidado e bem-estar." />
+<meta property="og:title" content="Salão Espaço Helena" />
+<meta property="og:description" content="Valorizamos técnica, estilo e dedicação em cada serviço. Venha conhecer nosso salão!" />
 <meta property="og:image" content="https://carlos-06467.github.io/salao-espaco-helena/og-image1.png" />
-<meta property="og:url" content="https://carlos-06467.github.io/salao-espaco-helena/vitrine.html" />
+<meta property="og:url" content="https://carlos-06467.github.io/salao-espaco-helena/areafeminina.html" />
 <meta name="twitter:card" content="summary_large_image" />
 
 <style>
- * { box-sizing:border-box; margin:0; padding:0; }
+  * { box-sizing: border-box; margin:0; padding:0; }
+  html, body { font-family: 'Poppins', sans-serif; background:#fff; height:100%; }
+  .page-container { min-height:100vh; display:flex; flex-direction:column; }
 
-html, body { 
-  height:100%; 
-  font-family:'Poppins', sans-serif; 
-  background:#fff; 
+  /* Menu */
+  .menu { background:#000; display:flex; justify-content:center; gap:40px; padding:10px 0; }
+  .menu a { color:#fff; text-decoration:none; font-weight:600; padding:4px 8px; border-radius:4px; display:flex; align-items:center; gap:6px; transition:0.3s; }
+  .menu a:hover { background:#222; }
+  .menu a::before { content:"•"; color:#C9A35B; margin-right:4px; }
+  .menu a.active { color:#C9A35B; }
+
+  /* Título */
+  .titulo-site { font-family:'Great Vibes', cursive; font-size:42px; text-align:center; margin-top:20px; line-height:1.3; color:#333; }
+  .salao { color:#000; }
+  .helena { color:#C9A35B; font-weight:bold; }
+  .intro { font-family:'Poppins', sans-serif; font-size:20px; color:#555; display:block; margin-bottom:12px; text-align:center; }
+
+  /* Sobre */
+  .sobre { max-width:900px; margin:24px auto; font-size:16px; line-height:1.6; color:#555; padding:0 18px; }
+  .sobre strong { font-weight:600; color:#555; }
+
+  /* Rodapé */
+  footer { background:#000; color:#fff; text-align:center; padding:30px 15px; margin-top:auto; }
+  footer .logo { font-family:'Great Vibes', cursive; font-size:32px; margin-bottom:10px; }
+  footer .salao { color:#fff; }
+  footer .helena { color:#C9A35B; font-weight:bold; }
+  footer .localidade { font-size:14px; }
+
+  /* Aba lateral */
+  .side-tab { position:fixed; top:50%; right:0; transform:translateY(-50%); background:#000; color:#fff; width:40px; height:140px; border-radius:8px 0 0 8px; display:flex; flex-direction:column; justify-content:center; align-items:center; cursor:pointer; z-index:999; transition:width 0.3s; }
+  .tab-panel { position:fixed; top:0; right:-400px; width:400px; height:100%; background:#fff; padding:30px; box-shadow:-3px 0 15px rgba(0,0,0,0.3); transition:right 0.3s; z-index:1000; overflow-y:auto; }
+  .tab-panel.active { right:0; }
+  .tab-panel h2 { font-size:22px; margin-bottom:15px; }
+  .tab-panel p { font-size:14px; line-height:1.4; margin-bottom:20px; font-weight:bold; } 
+  .tab-panel button { width:100%; padding:12px; margin-bottom:12px; background:#000; color:#C9A35B; font-weight:bold; border:none; border-radius:6px; font-size:16px; cursor:pointer; transition:0.3s; }
+  .tab-panel button:hover { color:#FFD700; }
+  .tab-panel button.active { color:#C9A35B; }
+  .overlay { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:998; }
+  .tab-panel img.area-image { width:100%; height:auto; margin-top:10px; display:block; }
+
+  /* Botão flutuante compacto 🔎🛠️ */
+ .float-tab-container {
+    position:fixed;
+    top:50%;
+    left:0;
+    transform:translateY(-50%);
+    background:#000;
+    border:3px solid #555; /* contorno cinza como o Bem-vindos ao site */
+    border-radius:8px;
+    padding:6px 8px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    cursor:pointer;
+    z-index:1001;
 }
+  .float-tab-container div { color:#fff; font-size:22px; margin:2px 0; }
 
-.page-container { 
-  min-height:100vh; 
-  display:flex; 
-  flex-direction:column; 
-}
-
-/* Menu */
-.menu { 
-  background:#000; 
-  display:flex; 
-  justify-content:center; 
-  gap:40px; 
-  padding:10px 0; 
-}
-
-.menu a { 
-  color:#fff; 
-  text-decoration:none; 
-  font-weight:600; 
-  padding:4px 8px; 
-  border-radius:4px; 
-  display:flex; 
-  align-items:center; 
-  gap:6px; 
-  transition:0.3s; 
-}
-
-.menu a:hover { 
-  background:#222; 
-}
-
-.menu a::before { 
-  content:"•"; 
-  color:#C9A35B; 
-  margin-right:4px; 
-}
-
-.menu a.active { 
-  color:#C9A35B; 
-}
-
-/* ===== TÍTULO DA VITRINE COM FUNDO (IGUAL SERVIÇOS) ===== */
-.vitrine-titulo { 
-  font-weight:600; 
-  font-size:42px; 
-  text-align:center; 
-  width:100%;
-  margin:0 0 70px 0;           /* espaço abaixo igual */
-  padding:90px 20px;          /* altura do fundo */
-  line-height:1.3; 
-  color:#fff; 
-  background-image: url("fotodavitrine1.jpg");
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-  text-shadow:
-    -1.5px -1.5px 0 #000,
-     1.5px -1.5px 0 #000,
-    -1.5px  1.5px 0 #000,
-     1.5px  1.5px 0 #000;
-}
-
-.salao { color:#fff; }
-.helena { color:#C9A35B; font-weight:bold; }
-
-/* Conteúdo */
-.vitrine-texto { 
-  color:#555; 
-  max-width:900px; 
-  margin:24px auto; 
-  font-size:16px; 
-  line-height:1.6; 
-  padding:0 30px; 
-}
-
-.vitrine-texto a { 
-  color:#000; 
-  text-decoration:underline; 
-  text-decoration-color:#C9A35B; 
-  text-decoration-thickness:2px; 
-  text-decoration-skip-ink:none; 
-}
-
-/* Rodapé */
-footer { 
-  background:#000; 
-  color:#fff; 
-  text-align:center; 
-  padding:40px 20px 20px 20px; 
-  margin-top:auto; 
-}
-
-footer .logo-footer { 
-  font-family:'Great Vibes', cursive; 
-  font-size:36px; 
-  margin:10px 0; 
-}
-
-footer .salao { 
-  color:#fff; 
-}
-
-footer .helena { 
-  color:#C9A35B; 
-  font-weight:bold; 
-}
-
-footer .localidade { 
-  font-size:14px; 
-  margin-bottom:10px; 
-}
-
-/* Aba lateral */
-.side-tab { 
-  position:fixed; 
-  top:50%; 
-  right:0; 
-  transform:translateY(-50%); 
-  background:#000; 
-  color:#fff; 
-  width:40px; 
-  height:140px; 
-  border-radius:8px 0 0 8px; 
-  display:flex; 
-  flex-direction:column; 
-  justify-content:center; 
-  align-items:center; 
-  cursor:pointer; 
-  z-index:999; 
-}
-
-.overlay { 
-  display:none; 
-  position:fixed; 
-  top:0; 
-  left:0; 
-  width:100%; 
-  height:100%; 
-  background:rgba(0,0,0,0.5); 
-  z-index:998; 
-}
-
-.tab-panel { 
-  position:fixed; 
-  top:0; 
-  right:-400px; 
-  width:400px; 
-  height:100%; 
-  background:#fff; 
-  padding:30px; 
-  box-shadow:-3px 0 15px rgba(0,0,0,0.3); 
-  transition:right 0.3s; 
-  z-index:1000; 
-  overflow-y:auto; 
-}
-
-.tab-panel.active { 
-  right:0; 
-}
-
-.tab-panel p { 
-  font-size:14px; 
-  line-height:1.4; 
-  margin-bottom:20px; 
-  font-weight:bold; 
-}
-
-.tab-panel button { 
-  width:100%; 
-  padding:12px; 
-  margin-bottom:12px; 
-  background:#000; 
-  color:#C9A35B; 
-  border:none; 
-  border-radius:6px; 
-  font-size:16px; 
-  cursor:pointer; 
-  font-weight:bold; 
-}
-
-.tab-panel img.area-image { 
-  max-width:100%; 
-  height:auto; 
-  display:block; 
-  margin-top:15px; 
-  border-radius:6px; 
-}
-
-/* Responsivo */
-@media(max-width:480px){
-  .vitrine-titulo{
-    font-size:36px; 
-    padding:70px 15px; 
-    margin-bottom:50px;
+  /* Painel de subtópicos do botão */
+  .float-panel {
+    position:fixed;
+    top:50%;
+    left:-220px;
+    transform:translateY(-50%);
+    width:200px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    transition:left 0.3s;
+    z-index:1000;
   }
-
-  .vitrine-texto{
-    font-size:15px; 
-    padding:0 12px;
+  .float-panel.active { left:60px; }
+  .subtopic-btn {
+    background:#000;
+    color:white;
+    font-weight:bold;
+    font-size:16px;
+    text-align:left;
+    padding:8px 12px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+    margin-left:20px;
   }
+.subtopic-btn {
+    display: block;
+    text-decoration: none;
+    background: #000;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: left;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 20px;
+}
 
-  .menu a{
-    font-size:14px; 
-    padding:4px 6px;
-  }
+.subtopic-btn:hover {
+    background: #222;
+}
 
-  .tab-panel{
-    width:300px; 
-    padding:20px;
+.subtopic-btn.active {
+    color: #C9A35B; /* dourado */
+}
+
+  @media(max-width:480px){
+    .titulo-site{font-size:36px;}
+    .intro{font-size:18px;}
+    .sobre{font-size:15px; padding:0 12px;}
+    .menu a{font-size:14px; padding:4px 6px;}
+    .tab-panel{width:300px; padding:20px;}
+    p {
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+p strong {
+  font-weight: 600;
+}
+
+p strong:last-child {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 15px;
+}
   }
+  .contato-link {
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+}
+
+.contato-link strong {
+  color: #000;
 }
 </style>
 </head>
 <body>
-
 <div class="page-container">
 
   <!-- Menu -->
-  <link rel="stylesheet" href="menu.css">
+ <link rel="stylesheet" href="menu.css">
 
 <nav class="menu">
   <a href="index.html">Introdução</a>
@@ -250,45 +168,60 @@ footer .localidade {
   <a href="vitrine.html">Vitrine</a>
 </nav>
 
-  <!-- Conteúdo principal -->
-  <main>
-    <h1 class="vitrine-titulo">Vitrine de Produtos do Salão</h1>
-    <section class="vitrine-texto">
-      <p>No Espaço Helena, você encontra produtos úteis para o dia a dia que facilitam seus cuidados com beleza e bem-estar.</p>
-      <p>Para adquirir, entre em contato:<br>
-        <strong>Helena</strong> — 📱<a href="https://api.whatsapp.com/send?phone=5588992010451&text=Olá! Gostaria de informações sobre os produtos do Espaço Helena."
-   target="_blank">
-📱 (88) 9 9201-0451
-</a><br>
-        <strong>Henrique</strong> — �<a href="https://api.whatsapp.com/send?phone=5588994731041&text=Olá! Gostaria de informações sobre os produtos do Espaço Helena."
-   target="_blank">
-📱 (88) 9 9201-0451
-</a>
-      </p>
-      <p><em>Observação: Os produtos são vendidos apenas no salão, não fazemos entregas.</em></p>
-    </section>
-  </main>
+<h1 class="titulo-site">
+  <span class="intro">Vitrine do</span>
+  <span class="salao">Salão</span>
+  <span class="helena">Espaço Helena</span>
+</h1>
 
-  <!-- Aba lateral -->
-  <div class="side-tab" id="sideTab">☰</div>
-  <div class="overlay" id="overlay"></div>
-  <div class="tab-panel" id="tabPanel">
-    <p>Explore nossas áreas exclusivas: acompanhe antes e depois, vídeos explicativos, processos e dicas especiais.<br>
-    Descubra detalhes do universo masculino e feminino com elegância e praticidade, e inspire-se com cada resultado.</p>
-    <button id="btn-masculina">Área Masculina</button>
-    <button id="btn-feminina">Área Feminina</button>
-    <button id="btn-home">Home</button>
-    <!-- Adição da imagem abaixo dos botões -->
-    <img src="imagemdaarea.png" alt="Imagem da Área" class="area-image">
+<section class="sobre">
+  <p>
+    Na nossa vitrine você encontra produtos indicados para cuidados pessoais, beleza e bem-estar, selecionados com atenção à qualidade e utilidade no dia a dia.
+  </p>
+  <p>
+    Alguns produtos são vendidos diretamente no salão e outros são recomendados por meio de links afiliados da Amazon, permitindo uma compra prática e segura.
+  </p>
+ <p>
+  <strong>Atendimento pelo WhatsApp:</strong><br>
+  <a class="contato-link" href="https://wa.me/558892010451" target="_blank">
+    <strong>Helena</strong> — 📱 <strong>(88) 9201-0451</strong>
+  </a><br>
+  <a class="contato-link" href="https://wa.me/558894731041" target="_blank">
+    <strong>Henrique</strong> — 📱 <strong>(88) 9473-1041</strong>
+  </a>
+</p>
+
+<p>
+  <strong>Instagram (links afiliados):</strong><br>
+  <a class="contato-link" href="https://www.instagram.com/henrique_assistente.beauty" target="_blank">
+    📸 <strong>@henrique_assistente.beauty</strong>
+  </a>
+</p>
+ <!-- <p>
+    <strong>Henrique — Cortes Masculinos:</strong> cortes modernos e tradicionais, luzes masculinas e barba com detalhamento profissional. 
+    <br><strong>📱 (88) 9473-1041</strong> 
+  </p> -->
+</section>
+</div>
+
+<!-- Aba lateral -->
+<div class="side-tab" id="sideTab">☰</div>
+<div class="overlay" id="overlay"></div>
+<div class="tab-panel" id="tabPanel">
+  <p>Explore nossas áreas exclusivas: acompanhe antes e depois, vídeos explicativos, processos e dicas especiais.<br>
+  Descubra detalhes do universo masculino e feminino com elegância e praticidade, e inspire-se com cada resultado.</p>
+  <button id="btn-masculina">Área Masculina</button>
+  <button id="btn-feminina">Área Feminina</button>
+  <button id="btn-home">Home</button>
+  <img src="imagemdaarea.png" alt="Área Feminina" class="area-image">
+</div>
+
+<footer>
+  <div class="logo">
+    <span class="salao">Salão</span> <span class="helena">Espaço Helena</span>
   </div>
-
-  <!-- Rodapé -->
-  <footer>
-    <div class="logo-footer">
-      <span class="salao">Salão</span> <span class="helena">Espaço Helena</span>
-    </div>
-    <p class="localidade">Rua Maria Rodrigues de Pontes - Alto do Velame - Russas, 490</p>
-  </footer>
+  <div class="localidade">Rua Maria Rodrigues de Pontes - Alto do Velame - Russas, 490</div>
+</footer>
 
 </div>
 
@@ -300,24 +233,16 @@ footer .localidade {
   const btnFeminina = document.getElementById('btn-feminina');
   const btnHome = document.getElementById('btn-home');
 
-  // Abrir aba lateral
   sideTab.addEventListener('click', () => {
     overlay.style.display = 'block';
     tabPanel.classList.add('active');
   });
 
-  // Fechar aba lateral
   overlay.addEventListener('click', () => {
     overlay.style.display = 'none';
     tabPanel.classList.remove('active');
   });
 
-  // Menu ativo
-  document.querySelectorAll('.menu a').forEach(link => {
-    if(link.href === window.location.href) link.classList.add('active');
-  });
-
-  // Botões aba lateral
   btnMasculina.addEventListener('click', () => {
     btnMasculina.classList.add('active');
     btnFeminina.classList.remove('active');
@@ -333,14 +258,15 @@ footer .localidade {
   btnHome.addEventListener('click', () => {
     window.location.href = "index.html";
   });
-</script>
-<script>
-  document.querySelectorAll('.menu a').forEach(link => {
-    if (link.href === window.location.href) {
-      link.classList.add('active');
-    }
-  });
-</script>
 
+  document.querySelectorAll('.menu a').forEach(link => {
+    if(link.href === window.location.href) link.classList.add('active');
+  });
+
+  // Botão flutuante emojis
+  const floatTab = document.getElementById('floatTab');
+  const floatPanel = document.getElementById('floatPanel');
+  floatTab.addEventListener('click', () => { floatPanel.classList.toggle('active'); });
+</script>
 </body>
 </html>
